@@ -1,0 +1,207 @@
+.sectionwhite {
+    background-color: var(--blanc);
+    color: var(--noir);
+    padding: 4.5rem 1.5rem;
+
+    &__title {
+        text-align: center;
+        font-weight: bold;
+        font-size: 2.5em;
+        margin-bottom: 3rem;
+    }
+
+    &__containermain {
+        display: flex;
+        justify-content: space-between;
+        margin: 3rem 0;
+        padding: 0 1.5rem;
+    }
+
+    &__containertext {
+        width: 50%;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-around;
+    }
+
+    &__container {
+        display: flex;
+        justify-content: center;
+        width: 50%;
+    }
+
+    &__info {
+        line-height: 2rem;
+    }
+
+    &__img {
+        max-width: 80%;
+        border-radius: 30% 70% 70% 30% / 30% 30% 70% 70%;
+        margin: auto;
+        background: linear-gradient(146deg, #665687, #b084cc, #5dd9c1);
+        background-size: 600% 600%;
+
+        -webkit-animation: AnimationName 11s ease infinite;
+        -moz-animation: AnimationName 11s ease infinite;
+        -o-animation: AnimationName 11s ease infinite;
+        animation: AnimationName 11s ease infinite;
+    }
+
+    &__img-profil{
+        max-width: 80%;
+        margin: auto;
+        padding-bottom: 2rem;
+    }
+
+    @-webkit-keyframes AnimationName {
+        0% {
+            background-position: 18% 0%
+        }
+
+        50% {
+            background-position: 83% 100%
+        }
+
+        100% {
+            background-position: 18% 0%
+        }
+    }
+
+    @-moz-keyframes AnimationName {
+        0% {
+            background-position: 18% 0%
+        }
+
+        50% {
+            background-position: 83% 100%
+        }
+
+        100% {
+            background-position: 18% 0%
+        }
+    }
+
+    @-o-keyframes AnimationName {
+        0% {
+            background-position: 18% 0%
+        }
+
+        50% {
+            background-position: 83% 100%
+        }
+
+        100% {
+            background-position: 18% 0%
+        }
+    }
+
+    @keyframes AnimationName {
+        0% {
+            background-position: 18% 0%
+        }
+
+        50% {
+            background-position: 83% 100%
+        }
+
+        100% {
+            background-position: 18% 0%
+        }
+    }
+}
+
+.btn {
+    background: var(--violet-ultra);
+    color: var(--blanc);
+    padding: 1rem;
+    font-size: inherit;
+    font-family: inherit;
+    border-radius: 45px;
+    border: 1px solid transparent;
+    box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.1);
+    transition: all 0.3s ease 0s;
+    margin-left: 1.5rem;
+    cursor: pointer;
+
+    &:hover {
+        background-color: var(--hoverbtn);
+        box-shadow: 0px 15px 20px var(--hoverbtnshadow);
+        color: var(--blanc);
+        transform: translateY(-7px);
+    }
+
+    &:focus {
+        background: var(--noir);
+        color: var(--blanc);
+    }
+}
+
+@media screen and (max-width:58rem) {
+
+    .sectionwhite {
+
+        text-align: center;
+
+        &__img {
+            max-width: 100%;
+            height: auto;
+        }
+
+        &__containertext {
+            width: 40%;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-around;
+            text-align: justify;
+        }
+
+        &__container {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            width: 50%;
+        }
+    }
+
+    .btn {
+        width: 50%;
+    }
+
+}
+
+@media screen and (max-width:35rem) {
+
+    .sectionwhite {
+
+        &__containermain {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            margin: 3rem 0;
+            padding: 0 1.5rem;
+            align-items: center;
+        }
+
+        &__containertext {
+            width: 100%;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-around;
+            text-align: justify;
+        }
+
+        &__img {
+            max-width: 100%;
+            height: auto;
+            margin-top: 1.5rem;
+            border-radius: 30% 70% 70% 30% / 30% 30% 70% 70%;
+            background-color: var(--violet-ultra);
+        }
+    }
+
+    .btn {
+        width: 100%;
+        margin-left: 0;
+    }
+
+}

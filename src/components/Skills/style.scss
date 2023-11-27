@@ -1,0 +1,81 @@
+.section {
+    padding: 0 1.5rem;
+    margin: 3rem 0;
+
+    &__title {
+        text-align: center;
+        font-weight: bold;
+        font-size: 2.5em;
+    }
+}
+
+.article {
+
+    &__title {
+        font-size: 1.5em;
+        margin-top: 4rem;
+        margin-bottom: 2rem;
+        font-weight: bold;
+    }
+
+    &__info {
+        margin: 2rem 0;
+        text-align: center;
+    }
+
+    &__icons {
+        margin: 3rem 0;
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
+        gap: 2rem;
+        justify-items: center;
+    }
+
+}
+
+i{
+    transition: width 2s, height 2s, background-color 2s, rotate 2s;
+}
+
+i:hover {
+    rotate: 360deg;
+    animation: myAnim 5s ease-in-out 0s 1 normal forwards;
+    @keyframes myAnim {
+	0% {
+		transform: scale3d(1, 1, 1);
+	}
+
+	30% {
+		transform: scale3d(1.25, 0.75, 1);
+	}
+
+	40% {
+		transform: scale3d(0.75, 1.25, 1);
+	}
+
+	50% {
+		transform: scale3d(1.15, 0.85, 1);
+	}
+
+	65% {
+		transform: scale3d(0.95, 1.05, 1);
+	}
+
+	75% {
+		transform: scale3d(1.05, 0.95, 1);
+	}
+
+	100% {
+		transform: scale3d(1, 1, 1);
+	}
+}
+}
+
+.light-theme .devicon-linux-plain{
+    color: var(--noir);
+}
+
+.light-theme .devicon-express-original{
+    color: var(--noir);
+}
+

@@ -1,0 +1,92 @@
+.recent-articles {
+    max-width: 50rem;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    &__title {
+        font-size: 1.5em;
+        font-weight: bold;
+        text-align: center;
+        margin: 2rem 1rem 2rem 1rem;
+
+    }
+
+    &__list {
+        list-style: none;
+        padding: 0;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+
+    &__item {
+        width: 90%;
+        padding: 1rem;
+
+        @media (min-width: 48rem) {
+            width: calc(33.333% - 2.5rem);
+            margin-right: 2.5rem;
+            margin-bottom: 1.25rem;
+
+            &:nth-child(3n) {
+                margin-right: 0;
+            }
+        }
+
+        border: 1px solid var(--blanc);
+        border-radius: 8px;
+        overflow: hidden;
+        box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        margin-bottom: 20px;
+
+        &:hover {
+            transform: translateY(-4px);
+            transition: transform 0.3s ease-in-out;
+        }
+    }
+
+    &__link {
+        text-decoration: none;
+        color: var(--blanc);
+        display: block;
+        padding: 1.25rem;
+        margin-bottom: 1rem;
+        background-color: var(--violet-ultra);
+        border-radius: 8px;
+    }
+
+    &__desc {
+        font-size: 0.9rem;
+        margin-bottom: 1rem;
+    }
+
+    &__date {
+        font-size: 0.8rem;
+        color: var(--gris);
+    }
+
+    &__btn {
+        background-color: var(--violet-ultra);
+        color: var(--blanc);
+        border: none;
+        padding: 1rem 2rem;
+        font-size: 1rem;
+        cursor: pointer;
+        border-radius: 45px;
+        margin-top: 2rem;
+        margin-bottom: 2.5rem;
+        font-family: inherit;
+        font-size: inherit;
+        box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.1);
+        transition: all 0.3s ease 0s;
+
+        &:hover {
+            background-color: var(--hoverbtn);
+            box-shadow: 0px 15px 20px var(--hoverbtnshadow);
+            color: var(--blanc);
+            transform: translateY(-7px);
+        }
+    }
+}

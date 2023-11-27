@@ -1,0 +1,249 @@
+.section {
+    padding-top: 1.5rem;
+    padding-bottom: 2.5rem;
+}
+
+.section__contact__container {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    margin: 3rem 0;
+
+    &__left {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+
+        &__icon {
+            border: 2px solid var(--violet-ultra);
+            padding: 1.5rem;
+            border-radius: 50%;
+            transition: 1000ms;
+
+            &:hover {
+                transition: 1000ms;
+                background-color: var(--violet-light);
+                border: 2px solid transparent;
+            }
+        }
+
+        &__mail {
+            color: var(--blanc);
+            margin: 3rem 0;
+            font-weight: bold;
+            padding: 1rem;
+            border: 2px solid var(--violet-ultra);
+            border-radius: 45px;
+            transition: 1000ms;
+
+            &:hover {
+                transition: 1000ms;
+                padding: 1rem 3rem;
+                transform: translateY(-0px);
+                background-color: var(--violet-light);
+                border: 2px solid transparent;
+            }
+        }
+    }
+}
+
+.contact__img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 68% 32% 44% 56% / 40% 60% 40% 60%;
+    background-color: var(--violet-ultra);
+    margin: auto;
+}
+
+
+i {
+    color: var(--blanc);
+    font-size: 5em;
+}
+
+.section__testimonial__img {
+    width: 5rem;
+    margin: 2rem;
+}
+
+.section__testimonial__container {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    margin: 3rem 0;
+
+    @media screen and (max-width: 64rem) {
+        flex-direction: column;
+    }
+
+    &__left,
+    &__right {
+        flex: 1;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        text-align: justify;
+    }
+
+    .section__testimonial__container__desc {
+        margin: 1rem;
+        padding: 1rem;
+        border: 1px solid var(--bordercard);
+        border-radius: 8px;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        line-height: 1.4;
+    }
+}
+
+.company {
+    color: var(--blanc);
+    font-weight: bold;
+    &:hover {
+        color: var(--orange);
+    }
+}
+
+.container__company {
+    text-align: center;
+    line-height: 1.4;
+}
+
+@media screen and (max-width:58rem) {
+    .section__contact__container__left {
+
+        &__info {
+            text-align: center;
+        }
+
+        &__mail {
+
+            &:hover {
+                padding: 1rem 2rem;
+            }
+        }
+    }
+
+    .section__contact__container__right {
+        display: flex;
+        align-items: center;
+    }
+
+    .contact__img {
+        max-width: 70%;
+        height: auto;
+        border-radius: 68% 32% 44% 56% / 40% 60% 40% 60%;
+        margin: auto;
+        background: linear-gradient(146deg, #665687, #b084cc, #5dd9c1);
+        background-size: 600% 600%;
+
+        -webkit-animation: AnimationName 11s ease infinite;
+        -moz-animation: AnimationName 11s ease infinite;
+        -o-animation: AnimationName 11s ease infinite;
+        animation: AnimationName 11s ease infinite;
+    }
+
+    @-webkit-keyframes AnimationName {
+        0% {
+            background-position: 18% 0%
+        }
+
+        50% {
+            background-position: 83% 100%
+        }
+
+        100% {
+            background-position: 18% 0%
+        }
+    }
+
+    @-moz-keyframes AnimationName {
+        0% {
+            background-position: 18% 0%
+        }
+
+        50% {
+            background-position: 83% 100%
+        }
+
+        100% {
+            background-position: 18% 0%
+        }
+    }
+
+    @-o-keyframes AnimationName {
+        0% {
+            background-position: 18% 0%
+        }
+
+        50% {
+            background-position: 83% 100%
+        }
+
+        100% {
+            background-position: 18% 0%
+        }
+    }
+
+    @keyframes AnimationName {
+        0% {
+            background-position: 18% 0%
+        }
+
+        50% {
+            background-position: 83% 100%
+        }
+
+        100% {
+            background-position: 18% 0%
+        }
+    }
+}
+
+@media screen and (max-width:60rem) {
+    .section__contact__container {
+        display: flex;
+        flex-direction: column;
+
+        &__right {
+            margin-top: 4rem;
+            display: flex;
+            align-items: center;
+        }
+    }
+}
+
+@media screen and (max-width:35rem) {
+    .section__contact__container {
+        display: flex;
+        flex-direction: column;
+
+        &__right {
+            margin-top: 4rem;
+            display: flex;
+            align-items: center;
+        }
+    }
+
+    .contact__img {
+        max-width: 70%;
+        height: auto;
+        border-radius: 68% 32% 44% 56% / 40% 60% 40% 60%;
+        background-color: var(--violet-ultra);
+        margin: auto;
+    }
+}
+
+.light-theme .devicon-github-original-wordmark {
+    color: var(--noir);
+}
+
+.light-theme .section__contact__container__left__mail {
+    color: var(--noir);
+}
+
+.light-theme .company {
+    color: var(--noir);
+    &:hover {
+        color: var(--orange);
+    }
+}

@@ -1,0 +1,186 @@
+.intro {
+
+    &__containermain {
+        display: flex;
+        justify-content: space-between;
+        margin: 3rem 0;
+        padding: 0 1.5rem;
+    }
+
+    &__img {
+        max-width: 41%;
+        height: auto;
+        border-radius: 30% 70% 33% 67% / 74% 20% 80% 26%;
+        margin: auto;
+        background: linear-gradient(146deg, #665687, #b084cc, #5dd9c1);
+        background-size: 600% 600%;
+
+        -webkit-animation: AnimationName 11s ease infinite;
+        -moz-animation: AnimationName 11s ease infinite;
+        -o-animation: AnimationName 11s ease infinite;
+        animation: AnimationName 11s ease infinite;
+    }
+
+    @-webkit-keyframes AnimationName {
+        0% {
+            background-position: 18% 0%
+        }
+
+        50% {
+            background-position: 83% 100%
+        }
+
+        100% {
+            background-position: 18% 0%
+        }
+    }
+
+    @-moz-keyframes AnimationName {
+        0% {
+            background-position: 18% 0%
+        }
+
+        50% {
+            background-position: 83% 100%
+        }
+
+        100% {
+            background-position: 18% 0%
+        }
+    }
+
+    @-o-keyframes AnimationName {
+        0% {
+            background-position: 18% 0%
+        }
+
+        50% {
+            background-position: 83% 100%
+        }
+
+        100% {
+            background-position: 18% 0%
+        }
+    }
+
+    @keyframes AnimationName {
+        0% {
+            background-position: 18% 0%
+        }
+
+        50% {
+            background-position: 83% 100%
+        }
+
+        100% {
+            background-position: 18% 0%
+        }
+    }
+
+    &__title {
+        display: flex;
+        flex-direction: column;
+        font-weight: bold;
+        text-align: right;
+        font-size: 6em;
+
+        &__elt {
+            padding: 1rem 0;
+        }
+    }
+
+    &__info {
+        display: flex;
+        flex-direction: column;
+        text-align: center;
+        line-height: 4rem;
+        margin-top: 5rem;
+        font-size: 1.5em;
+
+        &__elt {
+            font-size: 1.5em;
+        }
+    }
+
+}
+
+@media screen and (max-width:58rem) {
+
+    .intro {
+
+        &__containermain {
+            display: flex;
+            justify-content: space-around;
+            margin: 3rem 0;
+            padding: 0 1.5rem;
+        }
+
+        &__title {
+            &__elt {
+                padding: 1rem 0;
+                font-size: 0.5em;
+                text-align: center;
+            }
+        }
+
+        &__img {
+            max-width: 50%;
+            height: auto;
+        }
+
+        &__info {
+            display: flex;
+            flex-direction: column;
+            text-align: center;
+            margin-top: 3rem;
+            line-height: 2rem;
+            font-size: 1em;
+
+            &__elt {
+                font-size: 1em;
+            }
+        }
+
+    }
+}
+
+@media screen and (max-width:35rem) {
+    .intro {
+        &__containermain {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            margin: 3rem 0;
+            padding: 0 1.5rem;
+        }
+
+        &__img {
+            max-width: 70%;
+            margin: 2rem 0;
+        }
+
+        &__title {
+            display: flex;
+            flex-direction: column;
+            font-weight: bold;
+            text-align: center;
+            font-size: 3em;
+        }
+
+        &__title {
+            &__elt {
+                padding: 1rem 0;
+                font-size: 0.7em;
+            }
+        }
+
+        &__info {
+            display: flex;
+            flex-direction: column;
+            text-align: center;
+            margin-top: 3rem;
+            line-height: 2rem;
+            font-size: 1em;
+        }
+    }
+}
