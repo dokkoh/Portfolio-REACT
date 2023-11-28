@@ -8,7 +8,7 @@ const RecentArticles = () => {
 
     const fetchArticles = async () => {
         const apiKey = process.env.REACT_APP_API_KEY_NEWS;
-        const apiUrl = 'https://gnews.io/api/v4/search?q=animals&lang=fr&country=fr&max=3&apikey=' + apiKey;
+        const apiUrl = 'https://gnews.io/api/v4/search?q="developpement-web"&lang=fr&country=fr&max=3&sortby=publishedAt&apikey=' + apiKey;
 
         try {
             const response = await fetch(apiUrl);
@@ -28,6 +28,12 @@ console.log(data);
         fetchArticles();
     }, []);
 
+    const formatDate = (dateString) => {
+        const date = new Date(dateString);
+
+        return format(date, "dd/MM/yyyy HH:mm");
+    };
+
     return (
         <section role='region'>
             <div className='recent-articles'>
@@ -40,13 +46,13 @@ console.log(data);
                                     {article.title}
                                 </a>
                             </h3>
+                            <img className='recent-articles__img' src={article.image} alt="image en relation avec l'article" />
                             <p className='recent-articles__desc'>{article.description}</p>
-                            <p className='recent-articles__date'>{article.publishedAt}</p>
+                            <p className='recent-articles__date'>{formatDate(article.publishedAt)}</p>
                             <p className='recent-articles__author'>{article.source.name}</p>
                         </li>
                     ))}
                 </ul>
-                <button className='recent-articles__btn' onClick={fetchArticles}>Afficher 3 autres articles</button>
             </div>
         </section>
 

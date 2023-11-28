@@ -10,7 +10,10 @@
         font-weight: bold;
         text-align: center;
         margin: 2rem 1rem 2rem 1rem;
+    }
 
+    &__desc {
+        text-align: justify;
     }
 
     &__list {
@@ -19,11 +22,20 @@
         display: flex;
         flex-wrap: wrap;
         justify-content: center;
+        padding-bottom: 2rem;
+    }
+
+    &__img {
+        width: 12rem;
+        margin-bottom: 1rem;
     }
 
     &__item {
         width: 90%;
         padding: 1rem;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
 
         @media (min-width: 48rem) {
             width: calc(33.333% - 2.5rem);
