@@ -13,7 +13,7 @@ const RecentArticles = () => {
         try {
             const response = await fetch(apiUrl);
             const data = await response.json();
-console.log(data);
+
             if (data.articles) {
 
                 setArticles(data.articles);
