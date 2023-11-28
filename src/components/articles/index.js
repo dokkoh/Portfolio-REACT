@@ -8,12 +8,12 @@ const RecentArticles = () => {
 
     const fetchArticles = async () => {
         const apiKey = process.env.REACT_APP_API_KEY_NEWS;
-        const apiUrl = `https://newsapi.org/v2/everything?q=web-development&page=${page}&pageSize=3&apiKey=${apiKey}`;
+        const apiUrl = 'https://gnews.io/api/v4/search?q=animals&lang=fr&country=fr&max=3&apikey=' + apiKey;
 
         try {
             const response = await fetch(apiUrl);
             const data = await response.json();
-
+console.log(data);
             if (data.articles) {
 
                 setArticles(data.articles);
@@ -28,12 +28,6 @@ const RecentArticles = () => {
         fetchArticles();
     }, []);
 
-    const formatDate = (dateString) => {
-        const date = new Date(dateString);
-
-        return format(date, "dd/MM/yyyy HH:mm");
-    };
-
     return (
         <section role='region'>
             <div className='recent-articles'>
@@ -47,8 +41,8 @@ const RecentArticles = () => {
                                 </a>
                             </h3>
                             <p className='recent-articles__desc'>{article.description}</p>
-                            <p className='recent-articles__date'>{formatDate(article.publishedAt)}</p>
-                            <p className='recent-articles__author'>{article.author}</p>
+                            <p className='recent-articles__date'>{article.publishedAt}</p>
+                            <p className='recent-articles__author'>{article.source.name}</p>
                         </li>
                     ))}
                 </ul>
