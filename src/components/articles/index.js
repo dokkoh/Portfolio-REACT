@@ -15,7 +15,6 @@ const RecentArticles = () => {
             const data = await response.json();
 
             if (data.articles) {
-
                 setArticles(data.articles);
                 setPage((prevPage) => prevPage + 1);
             }
