@@ -1,13 +1,25 @@
 .footer {
     display: grid;
-    grid-template-columns: 1fr auto 1fr;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
     padding: 2rem 0;
     gap: 1rem;
     justify-items: center;
     background-color: var(--violet-ultra);
+    align-items: center;
 
     &__elt {
         color: var(--blanc);
+        text-align: center;
+        &__small {
+            font-size: 0.6rem;
+            color: var(--blanc);
+            @media screen and (max-width:63rem){
+                margin-left: 2rem;
+            }
+            @media screen and (max-width:35rem){
+                margin-left: 0rem;
+            }
+        }
     }
 
     &__elt a {
