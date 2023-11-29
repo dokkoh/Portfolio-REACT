@@ -11,7 +11,7 @@ function Contact() {
                 <div className='section__contact__container'>
                     <div className='section__contact__container__left'>
                         <p className='section__contact__container__left__info'>Pour échanger rapidement, rien de plus simple</p>
-                        <a className='section__contact__container__left__mail' href="mailto:clergeaud.jeremy@gmail.com">clergeaud.jeremy.com</a>
+                        <a className='section__contact__container__left__mail' href="mailto:clergeaud.jeremy@gmail.com">clergeaud.jeremy@gmail.com</a>
                         <div className='section__contact__container__left__icon'>
                             <Link className='section__contact__container__link' to="https://github.com/dokkoh" target='_blank'><i class="devicon-github-original-wordmark"></i></Link>
                         </div>

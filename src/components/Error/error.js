@@ -19,7 +19,7 @@ function Error() {
                     Il semble que même mon renard farceur se soit égaré ...
                 </p>
                 <p className='errorContainer__desc'>
-                    Il est occupé à discuter avec une carotte quelque part. Laissons le tranquille et retournons à <Link className='errorContainer__link' to="/">l'accueille ! 🦊🥕</Link>
+                    Il est occupé à discuter avec une carotte quelque part. Laissons le tranquille et retournons à <Link className='errorContainer__link' to="/">l'accueil ! 🦊🥕</Link>
                 </p>
             </div>
 
