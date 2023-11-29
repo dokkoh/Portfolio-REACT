@@ -102,3 +102,9 @@
         }
     }
 }
+.blogLink {
+    color: var(--blanc);
+}
+.light-theme .blogLink {
+    color: var(--noir);
+}
