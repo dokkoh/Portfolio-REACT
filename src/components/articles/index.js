@@ -6,7 +6,6 @@ import bdm from '../images/bdm.png'
 const RecentArticles = () => {
     const [articles, setArticles] = useState([]);
     const [requestCount, setRequestCount] = useState(0);
-    const [isLimitReached, setIsLimitReached] = useState(false);
     const [error, setError] = useState(null);
 
     const fetchArticles = async () => {
@@ -15,7 +14,6 @@ const RecentArticles = () => {
 
         try {
             const response = await fetch(apiUrl);
-
             if (response.ok) {
                 const data = await response.json();
                 setArticles(data.articles);
@@ -30,10 +28,22 @@ const RecentArticles = () => {
     };
 
     useEffect(() => {
+        const resetRequestCount = () => {
+            const now = new Date();
+            const midnight = new Date(now);
+            midnight.setHours(24, 0, 0, 0);
+
+            const timeUntilMidnight = midnight - now;
+
+            setTimeout(() => {
+                setRequestCount(0);
+            }, timeUntilMidnight);
+        };
+
+        resetRequestCount();
+
         if (requestCount < 100) {
             fetchArticles();
-        } else {
-            setIsLimitReached(true);
         }
     }, [requestCount]);
 
@@ -45,12 +55,12 @@ const RecentArticles = () => {
     return (
         <section role='region'>
             <div className='recent-articles'>
-                {isLimitReached ? (
+                {error ? (
                     <React.Fragment>
                         <h2 className='recent-articles__title'>Articles récents sur le développement web et la tech</h2>
                         <p>{error} <a className='blogLink' href="https://www.blogdumoderateur.com/" target="_blank" rel="noopener noreferrer">Blog du Modérateur</a>.</p>
                         <a href="https://www.blogdumoderateur.com/" target="_blank" rel="noopener noreferrer"><img className='recent-articles__img' src={bdm} alt="" /></a>
-                        
+
                     </React.Fragment>
                 ) : (
                     <React.Fragment>
