@@ -6,6 +6,7 @@ import bdm from '../images/bdm.png'
 const RecentArticles = () => {
     const [articles, setArticles] = useState([]);
     const [requestCount, setRequestCount] = useState(0);
+    const [isLimitReached, setIsLimitReached] = useState(false);
     const [error, setError] = useState(null);
 
     const fetchArticles = async () => {
@@ -31,6 +32,8 @@ const RecentArticles = () => {
     useEffect(() => {
         if (requestCount < 100) {
             fetchArticles();
+        } else {
+            setIsLimitReached(true);
         }
     }, [requestCount]);
 
@@ -42,7 +45,7 @@ const RecentArticles = () => {
     return (
         <section role='region'>
             <div className='recent-articles'>
-                {error ? (
+                {isLimitReached ? (
                     <React.Fragment>
                         <h2 className='recent-articles__title'>Articles récents sur le développement web et la tech</h2>
                         <p>{error} <a className='blogLink' href="https://www.blogdumoderateur.com/" target="_blank" rel="noopener noreferrer">Blog du Modérateur</a>.</p>
